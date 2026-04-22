@@ -1,0 +1,26 @@
+[2026-04-22T15:28:24Z] === ENRICH ITERATION 1 START | repo=zkat/miette sha=90785705 ===
+[2026-04-22T15:28:24Z] [iter=1] PHASE START: enrich repo=zkat/miette sha=90785705 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/90785705-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/907857058dc255caeae456e87146c629ce69cf5c.nq.gz
+[2026-04-22T15:28:47Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=78 MB
+[2026-04-22T15:28:51Z] [iter=1] AST store loaded triples=567521 load_secs=4 mem_mb=773 MB
+[2026-04-22T15:28:51Z] [iter=1] Step 2: Finding LSP targets mem_mb=773 MB
+[2026-04-22T15:28:52Z] [iter=1] LSP targets found call_sites=4577 imports=138 extends=0 implements=196 secs=1
+[2026-04-22T15:28:53Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=773 MB
+[2026-04-22T15:28:56Z] [iter=1] Position index built positions=39591 nodes_with_types=46469 secs=3 mem_mb=773 MB
+[2026-04-22T15:28:56Z] [iter=1] Step 3: Starting LSP resolution mem_mb=773 MB already_completed_types=[] already_completed_files=0
+[2026-04-22T15:28:56Z] [iter=1] Resolving target type target_type=call_site count=4577
+[2026-04-22T15:29:15Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.9 files_done=0 resolved=0 errors=0 current=tests/test_json.rs
+[2026-04-22T15:29:46Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.4 files_done=3 resolved=111 errors=117 current=src/handlers/graphical.rs
+[2026-04-22T15:30:34Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.2 files_done=9 resolved=302 errors=376 current=src/handlers/narratable.rs
+[2026-04-22T15:31:16Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.9 files_done=12 resolved=459 errors=608 current=miette-derive/src/label.rs
+[2026-04-22T15:31:52Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.5 files_done=20 resolved=650 errors=810 current=src/eyreish/wrapper.rs
+[2026-04-22T15:32:29Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.1 files_done=31 resolved=1033 errors=1024 current=tests/test_downcast.rs
+[2026-04-22T15:33:00Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.6 files_done=47 resolved=1279 errors=1195 current=miette-derive/src/source_code.rs
+[2026-04-22T15:33:21Z] [iter=1] Target type resolved target_type=call_site resolved=1377 errors=1311 secs=265 mem_mb=773 MB
+[2026-04-22T15:33:21Z] [iter=1] Resolving target type target_type=import_statement count=138
+[2026-04-22T15:33:30Z] [iter=1] HEARTBEAT target_type=import_statement elapsed_min=5.1 files_done=13 resolved=38 errors=0 current=tests/drop/mod.rs
+[2026-04-22T15:33:32Z] [iter=1] Target type resolved target_type=import_statement resolved=112 errors=0 secs=11 mem_mb=773 MB
+[2026-04-22T15:33:32Z] [iter=1] Resolving target type target_type=implements_clause count=196
+[2026-04-22T15:33:42Z] [iter=1] Target type resolved target_type=implements_clause resolved=188 errors=0 secs=10 mem_mb=773 MB
+[2026-04-22T15:33:53Z] [iter=1] Step 5: Writing final enrichment file triples=30041
+[2026-04-22T15:33:54Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/907857058dc255caeae456e87146c629ce69cf5c.nq.gz size_kb=577
+[2026-04-22T15:33:54Z] [iter=1] PHASE END: enrich elapsed_s=330 elapsed_min=5.5 total_triples=30041
