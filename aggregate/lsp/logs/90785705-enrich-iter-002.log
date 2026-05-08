@@ -1,0 +1,27 @@
+[2026-05-08T03:11:10Z] === ENRICH ITERATION 2 START | repo=zkat/miette sha=90785705 ===
+[2026-05-08T03:11:10Z] [iter=2] PHASE START: enrich repo=zkat/miette sha=90785705 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/90785705-enrich-iter-002.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/907857058dc255caeae456e87146c629ce69cf5c.nq.gz
+[2026-05-08T03:11:33Z] [iter=2] Step 1: Loading AST into disk-backed store mem_mb=78 MB
+[2026-05-08T03:11:37Z] [iter=2] AST store loaded triples=567521 load_secs=4 mem_mb=776 MB
+[2026-05-08T03:11:37Z] [iter=2] Step 2: Finding LSP targets mem_mb=776 MB
+[2026-05-08T03:11:38Z] [iter=2] LSP targets found call_sites=4577 imports=138 extends=0 implements=196 secs=1
+[2026-05-08T03:11:39Z] [iter=2] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=776 MB
+[2026-05-08T03:11:42Z] [iter=2] Position index built positions=39591 nodes_with_types=46469 secs=3 mem_mb=776 MB
+[2026-05-08T03:11:42Z] [iter=2] Step 3: Starting LSP resolution mem_mb=776 MB already_completed_types=[] already_completed_files=0
+[2026-05-08T03:11:42Z] [iter=2] Resolving target type target_type=call_site count=4577
+[2026-05-08T03:11:55Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=0.7 files_done=0 resolved=0 errors=0 current=tests/test_json.rs
+[2026-05-08T03:12:30Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=1.3 files_done=3 resolved=111 errors=117 current=src/handlers/graphical.rs
+[2026-05-08T03:13:00Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=1.8 files_done=6 resolved=189 errors=251 current=tests/graphical.rs
+[2026-05-08T03:13:49Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=2.7 files_done=10 resolved=357 errors=485 current=miette-derive/src/help.rs
+[2026-05-08T03:14:28Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=3.3 files_done=13 resolved=517 errors=662 current=miette-derive/src/severity.rs
+[2026-05-08T03:15:00Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=3.8 files_done=20 resolved=650 errors=810 current=src/eyreish/wrapper.rs
+[2026-05-08T03:15:46Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=4.6 files_done=31 resolved=1033 errors=1024 current=tests/test_downcast.rs
+[2026-05-08T03:16:17Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=5.1 files_done=44 resolved=1252 errors=1172 current=tests/test_convert.rs
+[2026-05-08T03:16:48Z] [iter=2] Target type resolved target_type=call_site resolved=1377 errors=1311 secs=306 mem_mb=776 MB
+[2026-05-08T03:16:48Z] [iter=2] Resolving target type target_type=import_statement count=138
+[2026-05-08T03:16:49Z] [iter=2] HEARTBEAT target_type=import_statement elapsed_min=5.6 files_done=0 resolved=0 errors=0 current=src/handlers/debug.rs
+[2026-05-08T03:16:59Z] [iter=2] Target type resolved target_type=import_statement resolved=112 errors=0 secs=11 mem_mb=776 MB
+[2026-05-08T03:16:59Z] [iter=2] Resolving target type target_type=implements_clause count=196
+[2026-05-08T03:17:09Z] [iter=2] Target type resolved target_type=implements_clause resolved=188 errors=0 secs=10 mem_mb=776 MB
+[2026-05-08T03:17:21Z] [iter=2] Step 5: Writing final enrichment file triples=30041
+[2026-05-08T03:17:21Z] [iter=2] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/907857058dc255caeae456e87146c629ce69cf5c.nq.gz size_kb=578
+[2026-05-08T03:17:21Z] [iter=2] PHASE END: enrich elapsed_s=371 elapsed_min=6.2 total_triples=30041
